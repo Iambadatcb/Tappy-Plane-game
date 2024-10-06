@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Tappy Plane.sln"
+    "dotnet.defaultSolution": "Tappy-Plane-game.sln"
 }
