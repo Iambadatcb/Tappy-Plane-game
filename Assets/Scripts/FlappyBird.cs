@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FlappyBird : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float jumpForce = 100;
+    public TextMeshProUGUI scoreText;
+    public int score = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -16,12 +20,12 @@ public class FlappyBird : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             if (rb.velocity.y < 0)
             {
 
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             }
 
             //animations
@@ -35,5 +39,15 @@ public class FlappyBird : MonoBehaviour
                 transform.rotation = Quaternion.Euler(0, 0, -30);
             }
         }
+
+
+
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        score++;
+        scoreText.text = score.ToString("D4");
+        
     }
 }
