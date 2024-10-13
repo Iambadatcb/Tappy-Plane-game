@@ -3,18 +3,26 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FlappyBird : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    public ScoreManager scoreManager;
     public float jumpForce = 100;
     public TextMeshProUGUI scoreText;
     public int score = 0;
+    public AudioClip successSound;
+    public AudioClip flap;
 
+
+    private AudioSource audioSource;
+
+    private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -24,7 +32,7 @@ public class FlappyBird : MonoBehaviour
         {
             if (rb.velocity.y < 0)
             {
-
+                audioSource.PlayOneShot(flap);
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             }
 
@@ -48,6 +56,18 @@ public class FlappyBird : MonoBehaviour
     {
         score++;
         scoreText.text = score.ToString("D4");
+        audioSource.PlayOneShot(successSound);
         
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        
+        scoreManager.ShowScoreBoard(score);
+        gameObject.SetActive(false);
+    }
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
