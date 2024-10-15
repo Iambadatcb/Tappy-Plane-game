@@ -13,6 +13,9 @@ public class FlappyBird : MonoBehaviour
     public int score = 0;
     public AudioClip successSound;
     public AudioClip flap;
+    
+    public AudioClip hit;
+    public AudioClip fall;
 
 
     private AudioSource audioSource;
@@ -21,6 +24,7 @@ public class FlappyBird : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
     }
@@ -62,12 +66,18 @@ public class FlappyBird : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        
+        audioSource.PlayOneShot(hit);
+        audioSource.PlayOneShot(fall);
         scoreManager.ShowScoreBoard(score);
+        Invoke("Die", 0.5f);
+    }
+    void Die()
+    {
         gameObject.SetActive(false);
     }
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    
 }

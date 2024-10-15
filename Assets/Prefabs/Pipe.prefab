@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7757657891189464711}
   - component: {fileID: 2118782661924201201}
+  - component: {fileID: 6622618116313209699}
   m_Layer: 0
   m_Name: rock
   m_TagString: Untagged
@@ -84,6 +85,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!68 &6622618116313209699
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5092841390643502}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.5745155, y: -1.1873274}
+  - {x: -0.3959215, y: -0.50323313}
+  - {x: -0.28324667, y: -0.06762582}
+  - {x: -0.20971006, y: -0.0066057844}
+  - {x: 0.05207764, y: 1.2022567}
+  - {x: 0.20370002, y: 1.1950771}
+  - {x: 0.29897353, y: 0.22073713}
+  - {x: 0.35874107, y: 0.17841575}
+  - {x: 0.38543683, y: -0.030650219}
+  - {x: 0.45697695, y: -0.5054228}
+  - {x: 0.5042347, y: -0.5574596}
+  - {x: 0.5814183, y: -1.2356488}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &3220081438528709888
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,6 +324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2415595859067600201}
   - component: {fileID: 625962182272176737}
+  - component: {fileID: 4891080013550524121}
   m_Layer: 0
   m_Name: rockDown
   m_TagString: Untagged
@@ -346,3 +399,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!68 &4891080013550524121
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6800240317085277536}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.5681721, y: 1.1761905}
+  - {x: -0.28520614, y: 0.06806776}
+  - {x: -0.19192767, y: -0.0003019981}
+  - {x: 0.061810624, y: -1.2254919}
+  - {x: 0.19940934, y: -1.2124206}
+  - {x: 0.30204093, y: -0.21340868}
+  - {x: 0.36517757, y: -0.20846407}
+  - {x: 0.4407436, y: 0.50218064}
+  - {x: 0.493623, y: 0.5554282}
+  - {x: 0.57379997, y: 1.1766949}
+  - {x: 0.57521534, y: 1.2043626}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
